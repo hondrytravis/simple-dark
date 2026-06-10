@@ -42,7 +42,9 @@ const tokens = {
 
   'ui.focusBorder':        'color_ctrl_blue',
   'ui.bg.sidebar':         'black',
-  'ui.bg.editor':          'lightBlack',
+  'ui.bg.editor':          'black',
+  'ui.bg.tab':             'tabGray',
+  'ui.bg.tabInactive':     'tabInactive',
   'ui.bg.input':           'darkGray',
   'ui.bg.titleBar':        'lightBlack',
   'ui.bg.statusBar':       'black',
@@ -50,6 +52,7 @@ const tokens = {
   'ui.bg.selection':       'gray',
   'ui.fg.primary':         'white',
   'ui.fg.secondary':       'mediumWhite',
+  'ui.border':             'border',
   'ui.border.active':      'deepSkyBlue',
   'ui.hover':              'color_ctrl_hover_gray',
   'ui.selection.active':   'darkGray_low',

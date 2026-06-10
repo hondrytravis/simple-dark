@@ -1,6 +1,7 @@
 function getConfig(color) {
   return {
     "sideBar.background": color['ui.bg.sidebar'],
+    "sideBar.border": color['ui.border'],
     "sideBarTitle.foreground": color['ui.fg.primary'],
 
     "sideBarSectionHeader.background": color['ui.bg.input'],

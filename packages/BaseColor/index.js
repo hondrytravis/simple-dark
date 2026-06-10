@@ -51,6 +51,15 @@ const palette = {
   red:         { dark: '#f4433c', 'dark-soft': '#f4433c', light: '#d93025', 'light-soft': '#B71C1C' },
   lightYellow: { dark: '#eefa7a', 'dark-soft': '#eefa7a', light: '#9a6700', 'light-soft': '#6A1B9A' },
 
+  // ── Tab background ────────────────────────────────────────
+
+  tabGray:      { dark: '#292a2d', 'dark-soft': '#292a2d', light: '#f0f0f0', 'light-soft': '#F0E8D8' },
+  tabInactive:  { dark: '#252729', 'dark-soft': '#252729', light: '#e8e8e8', 'light-soft': '#E8E0D0' },
+
+  // ── Border colors ─────────────────────────────────────────
+
+  border:       { dark: '#3c4043', 'dark-soft': '#3c4043', light: '#e8e8e8', 'light-soft': '#EBE4D5' },
+
   // ── UI Primary / Control colors ────────────────────────────
 
   color_ctrl_blue:        { dark: '#00A1F1', 'dark-soft': '#00A1F1', light: '#1a73e8', 'light-soft': '#155dbd' },

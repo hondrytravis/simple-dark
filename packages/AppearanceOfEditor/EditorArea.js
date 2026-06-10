@@ -4,6 +4,9 @@ function getConfig(color) {
     "editor.background": color['ui.bg.editor'],
     "editor.foreground": color['ui.fg.secondary'],
 
+    // editor group borders
+    "editorGroup.border": color['ui.border'],
+
     // find Match string attr
     "editor.findMatchHighlightBackground": color['ui.bg.selection'],
 
