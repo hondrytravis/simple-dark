@@ -22,7 +22,7 @@ function buildDarkTheme() {
 
 function buildDarkSoftTheme() {
   const opts = { name: 'Simple Dark Soft' }
-  const mode = 'soft'
+  const mode = 'dark-soft'
   const result = Object.assign({}, AboutMyself(opts), Semantic, Editor(color(mode)), Code(color(mode)))
   return JSON.stringify(result)
 }

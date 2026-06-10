@@ -1,152 +1,76 @@
 /**
- * @base_color Theme main color config
- * Single and multi-line comments
- * you can be changed to you love the color
- * All colors pass the test [WCAG](https://www.w3.org/TR/WCAG/#contrast-minimum)
+ * @base_color Theme color palette
+ * Organized by token → each token holds values for all 4 themes.
+ * Change a value here and you instantly see which themes are affected.
+ * All colors pass WCAG AA contrast checks.
  */
-function getDarkColors() {
-  return {
-    // dark color
-    black: "#202124",
-    lightBlack: "#24272A",
-    gray: "#444444",
-    darkGray: "#2c2f32",
-    darkGray_low: '#35363a',
 
-    // comment
-    lightGray: "#737373",
+const palette = {
 
-    // light color
-    white: "#f0f0f0",
-    grayWhite: "#D2D3D9",
-    mediumWhite: "#dddddd",
+  // ── Background colors ──────────────────────────────────────
 
-    tomato: "#FF6347",
-    pink: "#FF69B4",
-    cyan: "#8BE9FD",
-    lightCyan: "#E1FFFF",
-    green: "#00E673", // #78F078
-    lightGreen: "#C3E88D",
-    orange: "#FFB86C",
-    purple: "#BD93F9",
-    red: "#f4433c",
-    blue: "#1e90ff",
-    lightBlue: '#75ABE0',
-    deepSkyBlue: "#00bfff",
-    mediumBlue: "#00A1F1",
-    lightYellow: "#eefa7a",
-    // primary color
-    color_ctrl_blue: "#00A1F1",
-    color_ctrl_blue_active: '#93B3F2',
-    color_ctrl_hover_gray: '#3D4043',
+  black:       { dark: '#202124', 'dark-soft': '#202124', light: '#fafafa', 'light-soft': '#FAF5E8' },
+  lightBlack:  { dark: '#24272A', 'dark-soft': '#24272A', light: '#f3f3f3', 'light-soft': '#F8F1E3' },
+  darkGray:    { dark: '#2c2f32', 'dark-soft': '#2c2f32', light: '#f5f5f5', 'light-soft': '#F3ECDE' },
+  darkGray_low:{ dark: '#35363a', 'dark-soft': '#35363a', light: '#e8e8e8', 'light-soft': '#EBE4D5' },
+  gray:        { dark: '#444444', 'dark-soft': '#444444', light: '#e0e0e0', 'light-soft': '#E3DCCF' },
 
-    // semantic
-    string_color: "#C3E88D", // same as lightGreen
-  }
-}
+  // ── Text / Foreground colors ───────────────────────────────
 
-function getLightColors() {
-  return {
-    // background colors (inverted from dark)
-    black: "#fafafa",      // Main background
-    lightBlack: "#f3f3f3", // Sidebar/Panel background
-    gray: "#e0e0e0",       // Borders/Dividers
-    darkGray: "#f5f5f5",   // Input background
-    darkGray_low: '#e8e8e8', // Sidebar active selection (slightly darker than hover #f1f3f4)
+  white:       { dark: '#f0f0f0', 'dark-soft': '#f0f0f0', light: '#202124', 'light-soft': '#202124' },
+  mediumWhite: { dark: '#dddddd', 'dark-soft': '#dcdcdc', light: '#3c4043', 'light-soft': '#3c4043' },
+  grayWhite:   { dark: '#D2D3D9', 'dark-soft': '#D2D3D9', light: '#5f6368', 'light-soft': '#5f6368' },
 
-    // comment
-    lightGray: "#a0a1a7", // #a0a0a0 Darker gray for better contrast (WCAG AA)
+  // ── Comment color ──────────────────────────────────────────
 
-    // text colors
-    white: "#202124",      // Main text color (dark for light theme)
-    grayWhite: "#5f6368",  // Secondary text
-    mediumWhite: "#3c4043",
+  lightGray:   { dark: '#737373', 'dark-soft': '#737373', light: '#a0a1a7', 'light-soft': '#a0a1a7' },
 
-    // Syntax Highlighting - Adjusted for Light Theme
-    // Philosophy: Green for functions, Orange for parameters
-    tomato: "#d93025",
-    pink: "#d01884",
-    cyan: "#007b83",       // Darker cyan for visibility
-    lightCyan: "#006064",  // Much darker for visibility on white
-    green: "#048043",      // Darker green for functions (WCAG AA)
-    lightGreen: "#2e7d32", // Darker lightGreen (WCAG AA)
-    orange: "#BF5400",     // Darker orange/brown for parameters (WCAG AA)
-    purple: "#9334e6",
-    red: "#d93025",
-    blue: "#1a73e8",
-    lightBlue: '#1967d2',
-    deepSkyBlue: "#0277bd", // Darker sky blue for native objects
-    mediumBlue: "#0277bd",  // Darker mediumBlue (WCAG AA)
-    lightYellow: "#9a6700", // Darker yellow/gold (WCAG AA)
+  // ── Syntax: Core ───────────────────────────────────────────
+  // Philosophy: Green = functions, Orange = parameters
 
-    // primary color
-    color_ctrl_blue: "#1a73e8",
-    color_ctrl_blue_active: '#8ab4f8',
-    color_ctrl_hover_gray: '#f1f3f4',
+  green:       { dark: '#00E673', 'dark-soft': '#56b97f', light: '#048043', 'light-soft': '#00753B' },
+  lightGreen:  { dark: '#C3E88D', 'dark-soft': '#C3E88D', light: '#2e7d32', 'light-soft': '#2e7d32' },
+  orange:      { dark: '#FFB86C', 'dark-soft': '#D5B884', light: '#BF5400', 'light-soft': '#BF5400' },
 
-    // semantic
-    string_color: "#a31515", // Red for strings to distinguish from green functions
-  }
-}
+  // ── Syntax: Types & Identifiers ────────────────────────────
 
-function getLightSoftColors() {
-  const lightColors = getLightColors();
-  return {
-    ...lightColors,
-    // background colors - Safari Reader Mode style
-    black: "#FAF5E8",      // Sidebar/Panel background - Slightly lighter
-    lightBlack: "#F8F1E3", // Editor background - Safari Reader Color
-    gray: "#E3DCCF",       // Borders/Dividers
-    darkGray: "#F3ECDE",   // Input & Activity Bar background - Slightly darker
-    darkGray_low: '#EBE4D5', // Sidebar active selection
-    color_ctrl_hover_gray: '#EBE4D5', // Hover state
+  cyan:        { dark: '#8BE9FD', 'dark-soft': '#9CCBD1', light: '#007b83', 'light-soft': '#006F94' },
+  lightCyan:   { dark: '#E1FFFF', 'dark-soft': '#F0F0E0', light: '#006064', 'light-soft': '#1B1F23' },
+  deepSkyBlue: { dark: '#00bfff', 'dark-soft': '#4da5c9', light: '#0277bd', 'light-soft': '#005393' },
+  mediumBlue:  { dark: '#00A1F1', 'dark-soft': '#00A1F1', light: '#0277bd', 'light-soft': '#005393' },
+  blue:        { dark: '#1e90ff', 'dark-soft': '#1e90ff', light: '#1a73e8', 'light-soft': '#155dbd' },
+  lightBlue:   { dark: '#75ABE0', 'dark-soft': '#75ABE0', light: '#1967d2', 'light-soft': '#1967d2' },
 
-    // Adjusted colors for WCAG AA on #F8F1E3
-    purple: "#8020D0",
-    lightCyan: "#1B1F23",   // was #006064
-    tomato: "#B71C1C",      // was #d93025
-    red: "#B71C1C",         // was #d93025
-    cyan: "#006F94",        // was #007b83
-    green: "#00753B",       // was #048043
-    orange: "#BF5400",      // was #b35900
-    blue: "#155dbd",        // was #1a73e8
-    color_ctrl_blue: "#155dbd", // was #1a73e8
-    deepSkyBlue: "#005393", // was #0277bd
-    mediumBlue: "#005393",  // was #0277bd
-    lightYellow: "#6A1B9A",  // was #9a6700
-  }
-}
+  // ── Syntax: Accent colors ──────────────────────────────────
 
-function getSoftColors(opts = {}) {
-  return {
-    ...getDarkColors(),
-    ...opts
-  }
-}
+  purple:      { dark: '#BD93F9', 'dark-soft': '#BD93F9', light: '#9334e6', 'light-soft': '#8020D0' },
+  pink:        { dark: '#FF69B4', 'dark-soft': '#F572B7', light: '#d01884', 'light-soft': '#d01884' },
+  tomato:      { dark: '#FF6347', 'dark-soft': '#FF6347', light: '#d93025', 'light-soft': '#B71C1C' },
+  red:         { dark: '#f4433c', 'dark-soft': '#f4433c', light: '#d93025', 'light-soft': '#B71C1C' },
+  lightYellow: { dark: '#eefa7a', 'dark-soft': '#eefa7a', light: '#9a6700', 'light-soft': '#6A1B9A' },
 
-// mode: dark | soft | light | light-soft
+  // ── UI Primary / Control colors ────────────────────────────
+
+  color_ctrl_blue:        { dark: '#00A1F1', 'dark-soft': '#00A1F1', light: '#1a73e8', 'light-soft': '#155dbd' },
+  color_ctrl_blue_active: { dark: '#93B3F2', 'dark-soft': '#93B3F2', light: '#8ab4f8', 'light-soft': '#8ab4f8' },
+  color_ctrl_hover_gray:  { dark: '#3D4043', 'dark-soft': '#3D4043', light: '#f1f3f4', 'light-soft': '#EBE4D5' },
+
+  // ── Semantic ───────────────────────────────────────────────
+
+  string_color: { dark: '#C3E88D', 'dark-soft': '#C3E88D', light: '#a31515', 'light-soft': '#a31515' },
+};
+
+/**
+ * Extract a flat { token: hex } object for a given theme mode.
+ * @param {'dark' | 'dark-soft' | 'light' | 'light-soft'} mode
+ * @returns {Record<string, string>}
+ */
 function getColors(mode = 'dark') {
-  if (mode === 'light') {
-    return getLightColors();
+  const result = {};
+  for (const [token, modes] of Object.entries(palette)) {
+    result[token] = modes[mode] ?? modes.dark;
   }
-
-  if (mode === 'light-soft') {
-    return getLightSoftColors();
-  }
-
-  if (mode === 'soft') {
-    return getSoftColors({
-      pink: '#F572B7', // DD7CA0
-      green: '#56b97f',
-      orange: '#D5B884', // F2C3A7
-      cyan: '#9CCBD1',
-      lightCyan: "#F0F0E0",
-      deepSkyBlue: "#4da5c9",
-      mediumWhite: "#dcdcdc"
-    })
-  }
-
-  return getDarkColors()
+  return result;
 }
 
-module.exports = getColors
+module.exports = getColors;
