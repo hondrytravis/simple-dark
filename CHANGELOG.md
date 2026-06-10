@@ -1,5 +1,24 @@
 # Release notes for Simple Dark Theme
 
+## [released 1.5.0]
+
+- **Dark Modern Tab Styling**:
+  - Active tab now matches editor background for seamless visual flow.
+  - Inactive tabs blend with the tab strip (Dark Modern style).
+  - Tab active indicator moved to top edge (`tab.activeBorderTop`).
+- **Borders & Separation**:
+  - Added subtle borders to activity bar, side bar, panel, status bar, title bar, and editor groups.
+  - Tab strip bottom border separates tabs from breadcrumb area.
+- **Chrome Dark Mode Palette**:
+  - Editor background unified to Google Chrome dark (`#202124`).
+  - Tab strip and inactive tabs use Chrome surface colors (`#292a2d`).
+  - Border colors follow Chrome's outline palette (`#3c4043`).
+- **Light Mode Refinements**:
+  - Borders use softer, lighter tones (`#e8e8e8`) matching VS Code Light Modern.
+  - Activity bar and title bar get subtle depth via `chromeBg` color.
+- **Sidebar**: Dark mode sidebar now slightly deeper for visual separation.
+- **Palette**: Added `tabGray`, `tabInactive`, `border`, `chromeBg` color tokens.
+
 ## [released 1.4.3]
 
 - **Simple Light Soft (Refined Ink & Paper)**:
