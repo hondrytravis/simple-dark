@@ -1,7 +1,7 @@
 function getConfig(color) {
   return {
     // find/replace
-    "editorWidget.background": color['black'],
+    "editorWidget.background": color['ui.bg.widget'],
   }
 }
 

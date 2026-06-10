@@ -16,7 +16,7 @@ function getConfig(color) {
         "string.template"
       ],
       "settings": {
-        "foreground": color['string_color']
+        "foreground": color['syntax.string']
       }
     },
     {
@@ -25,7 +25,7 @@ function getConfig(color) {
         "string.regexp",
       ],
       "settings": {
-        "foreground": color['green']
+        "foreground": color['syntax.regexp']
       }
     },
     {
@@ -34,7 +34,7 @@ function getConfig(color) {
         "string.unquoted.attribute-value.css"
       ],
       "settings": {
-        "foreground": color['purple']
+        "foreground": color['syntax.cssValue']
       }
     }
   ]

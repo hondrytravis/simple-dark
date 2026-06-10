@@ -12,7 +12,7 @@ function getConfig(color) {
         "punctuation.definition.comment"
       ],
       settings: {
-        "foreground": color['lightGray']
+        "foreground": color['syntax.comment']
       }
     }
   ]

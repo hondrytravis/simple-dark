@@ -12,7 +12,7 @@ function getConfig(color) {
         "storage"
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.storage']
       }
     },
     {
@@ -21,7 +21,7 @@ function getConfig(color) {
         "storage.type.cs"
       ],
       "settings": {
-        "foreground": color['deepSkyBlue']
+        "foreground": color['syntax.type']
       }
     }
   ]

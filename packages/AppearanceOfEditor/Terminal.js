@@ -1,7 +1,7 @@
 
 function getConfig(color) {
   return {
-    "terminal.background": color['lightBlack'],
+    "terminal.background": color['ui.bg.editor'],
   }
 }
 

@@ -1,7 +1,7 @@
 function getConfig(color) {
   return {
     // panel
-    "panelTitle.activeBorder": color['deepSkyBlue']
+    "panelTitle.activeBorder": color['ui.border.active']
   }
 }
 

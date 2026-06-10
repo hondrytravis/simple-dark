@@ -13,7 +13,7 @@ function getConfig(color) {
         "constant.numeric"
       ],
       "settings": {
-        "foreground": color['purple']
+        "foreground": color['syntax.constant']
       }
     },
   ]

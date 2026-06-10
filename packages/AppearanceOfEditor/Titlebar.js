@@ -1,8 +1,8 @@
 function getConfig(color) {
   return {
     // active bar
-    "titleBar.activeBackground": color['lightBlack'],
-    "titleBar.inactiveBackground": color['black'],
+    "titleBar.activeBackground": color['ui.bg.titleBar'],
+    "titleBar.inactiveBackground": color['ui.bg.sidebar'],
   }
 }
 module.exports = getConfig

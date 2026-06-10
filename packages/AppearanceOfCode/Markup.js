@@ -13,7 +13,7 @@ function getConfig(color) {
         "text.html.markdown"
       ],
       "settings": {
-        "foreground": color['grayWhite']
+        "foreground": color['syntax.markupText']
       }
     },
     {
@@ -22,7 +22,7 @@ function getConfig(color) {
         "punctuation.definition.heading.markdown",
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.markupHeading']
       }
     },
     {
@@ -31,7 +31,7 @@ function getConfig(color) {
         "markup.heading.markdown"
       ],
       "settings": {
-        "foreground": color['deepSkyBlue']
+        "foreground": color['syntax.markupHeadingContent']
       }
     },
     {
@@ -41,7 +41,7 @@ function getConfig(color) {
         "markup.fenced_code.block.markdown"
       ],
       "settings": {
-        "foreground": color['lightBlue']
+        "foreground": color['syntax.markupCode']
       }
     },
     {
@@ -51,7 +51,7 @@ function getConfig(color) {
         "markup.inline.raw.string.markdown",
       ],
       "settings": {
-        "foreground": color['lightBlue']
+        "foreground": color['syntax.markupCode']
       }
     },
     {
@@ -60,7 +60,7 @@ function getConfig(color) {
         "markup.underline.link.markdown",
       ],
       "settings": {
-        "foreground": color['lightBlue']
+        "foreground": color['syntax.markupCode']
       }
     },
     {
@@ -69,7 +69,7 @@ function getConfig(color) {
         "meta.link.inline.markdown",
       ],
       "settings": {
-        "foreground": color['orange']
+        "foreground": color['syntax.markupEmphasis']
       }
     },
     {
@@ -79,7 +79,7 @@ function getConfig(color) {
         "markup.bold.markdown"
       ],
       "settings": {
-        "foreground": color['orange']
+        "foreground": color['syntax.markupEmphasis']
       }
     },
     {
@@ -89,7 +89,7 @@ function getConfig(color) {
         "markup.list.unnumbered.markdown"
       ],
       "settings": {
-        "foreground": color['orange']
+        "foreground": color['syntax.markupEmphasis']
       }
     },
     {
@@ -98,7 +98,7 @@ function getConfig(color) {
         "punctuation.definition.string.begin.markdown",
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.markupHeading']
       }
 
     },
@@ -108,7 +108,7 @@ function getConfig(color) {
         "markup.underline.link.image.markdown",
       ],
       "settings": {
-        "foreground": color['lightBlue']
+        "foreground": color['syntax.markupCode']
       }
     },
     {
@@ -117,7 +117,7 @@ function getConfig(color) {
         "string.other.link.description.markdown",
       ],
       "settings": {
-        "foreground": color['lightYellow']
+        "foreground": color['syntax.markupImage']
       }
     }
   ]

@@ -1,17 +1,17 @@
 function getConfig(color) {
   return {
-    "sideBar.background": color['black'],
-    "sideBarTitle.foreground": color['white'],
+    "sideBar.background": color['ui.bg.sidebar'],
+    "sideBarTitle.foreground": color['ui.fg.primary'],
 
-    "sideBarSectionHeader.background": color['darkGray'],
-    "list.errorForeground": color['tomato'],
-    "list.warningForeground": color['tomato'],
+    "sideBarSectionHeader.background": color['ui.bg.input'],
+    "list.errorForeground": color['list.error'],
+    "list.warningForeground": color['list.warning'],
 
-    "list.activeSelectionBackground": color['darkGray_low'],
-    "list.activeSelectionForeground": color['white'],
-    "list.inactiveSelectionBackground": color['darkGray_low'],
-    "list.hoverBackground": color['color_ctrl_hover_gray'],
-    "list.focusAndSelectionOutline": color['deepSkyBlue'],
+    "list.activeSelectionBackground": color['ui.selection.active'],
+    "list.activeSelectionForeground": color['ui.fg.primary'],
+    "list.inactiveSelectionBackground": color['ui.selection.active'],
+    "list.hoverBackground": color['ui.hover'],
+    "list.focusAndSelectionOutline": color['ui.border.active'],
   }
 }
 

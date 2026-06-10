@@ -1,9 +1,9 @@
 function getConfig(color) {
   return {
     // active bar
-    "activityBar.background": color['darkGray'],
-    "activityBar.foreground": color['white'],
-    "activityBarBadge.background": color['deepSkyBlue'],
+    "activityBar.background": color['ui.bg.input'],
+    "activityBar.foreground": color['ui.fg.primary'],
+    "activityBarBadge.background": color['ui.border.active'],
   }
 }
 

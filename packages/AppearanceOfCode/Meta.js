@@ -12,7 +12,7 @@ function getConfig(color) {
         "entity.name.function"
       ],
       "settings": {
-        "foreground": color['green']
+        "foreground": color['syntax.function']
       }
     },
     {
@@ -22,7 +22,7 @@ function getConfig(color) {
         "meta.attribute-with-value.id",
       ],
       "settings": {
-        "foreground": color['lightGreen']
+        "foreground": color['syntax.attributeId']
       }
     },
     {
@@ -31,7 +31,7 @@ function getConfig(color) {
         "meta.tag.block.any"
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.tag']
       }
     },
     {
@@ -40,7 +40,7 @@ function getConfig(color) {
         "meta.property-value.css"
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.cssValue']
       }
     }
   ]

@@ -12,7 +12,7 @@ function getConfig(color) {
         "invalid.illegal"
       ],
       "settings": {
-        "foreground": color['red']
+        "foreground": color['syntax.invalid']
       }
     },
     {
@@ -21,7 +21,7 @@ function getConfig(color) {
         "invalid.deprecated.entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": color['deepSkyBlue']
+        "foreground": color['syntax.attribute']
       }
     },
     {
@@ -30,7 +30,7 @@ function getConfig(color) {
         "invalid.deprecated.media"
       ],
       "settings": {
-        "foreground": color['green']
+        "foreground": color['syntax.function']
       }
     }
   ]

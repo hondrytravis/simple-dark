@@ -5,6 +5,8 @@
  * All colors pass WCAG AA contrast checks.
  */
 
+const tokens = require('./tokens');
+
 const palette = {
 
   // ── Background colors ──────────────────────────────────────
@@ -67,8 +69,13 @@ const palette = {
  */
 function getColors(mode = 'dark') {
   const result = {};
+  // Raw palette colors
   for (const [token, modes] of Object.entries(palette)) {
     result[token] = modes[mode] ?? modes.dark;
+  }
+  // Semantic tokens → resolve to raw color hex
+  for (const [semToken, rawToken] of Object.entries(tokens)) {
+    result[semToken] = result[rawToken];
   }
   return result;
 }

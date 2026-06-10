@@ -16,7 +16,7 @@ function getConfig(color) {
         "support.constant",
       ],
       "settings": {
-        "foreground": color['cyan']
+        "foreground": color['syntax.support']
       }
     },
     {
@@ -26,7 +26,7 @@ function getConfig(color) {
         "support.constant.property-value.css"
       ],
       "settings": {
-        "foreground": color['purple']
+        "foreground": color['syntax.constant']
       }
     }
   ]

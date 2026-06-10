@@ -12,7 +12,7 @@ function getConfig(color) {
         "keyword"
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.keyword']
       }
     },
     {
@@ -30,7 +30,7 @@ function getConfig(color) {
         "keyword.type.cs"
       ],
       "settings": {
-        "foreground": color['cyan'],
+        "foreground": color['syntax.keywordType'],
       }
     },
 

@@ -13,7 +13,7 @@ function getConfig(color) {
         "entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": color['deepSkyBlue']
+        "foreground": color['syntax.type']
       }
     },
     {
@@ -22,7 +22,7 @@ function getConfig(color) {
         "entity.other.attribute-name.pseudo-element",
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.pseudo']
       }
     },
     {
@@ -31,7 +31,7 @@ function getConfig(color) {
         "entity.name.tag"
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.tag']
       }
     },
     {
@@ -40,7 +40,7 @@ function getConfig(color) {
         "entity.name.type.class",
       ],
       "settings": {
-        "foreground": color['deepSkyBlue']
+        "foreground": color['syntax.native']
       }
     },
     {
@@ -50,7 +50,7 @@ function getConfig(color) {
         "entity.name.namespace.c"
       ],
       "settings": {
-        "foreground": color['cyan']
+        "foreground": color['syntax.namespace']
       }
     }
   ]

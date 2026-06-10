@@ -12,7 +12,7 @@ function getConfig(color) {
         "variable",
       ],
       "settings": {
-        "foreground": color['mediumWhite']
+        "foreground": color['syntax.variable']
       }
     },
     {
@@ -21,7 +21,7 @@ function getConfig(color) {
         "variable.language",
       ],
       "settings": {
-        "foreground": color['purple']
+        "foreground": color['syntax.constant']
       }
     },
     {
@@ -30,7 +30,7 @@ function getConfig(color) {
         "variable.parameter",
       ],
       "settings": {
-        "foreground": color['orange']
+        "foreground": color['syntax.parameter']
       }
     },
     {
@@ -39,7 +39,7 @@ function getConfig(color) {
         "variable.other.constant",
       ],
       "settings": {
-        "foreground": color['lightCyan']
+        "foreground": color['syntax.variableConstant']
       }
     },
     {
@@ -49,7 +49,7 @@ function getConfig(color) {
         "variable.other.interpolation.less",
       ],
       "settings": {
-        "foreground": color['lightCyan']
+        "foreground": color['syntax.variableConstant']
       }
     },
     {
@@ -58,7 +58,7 @@ function getConfig(color) {
         "entity.name.variable.parameter.cs"
       ],
       "settings": {
-        "foreground": color['orange']
+        "foreground": color['syntax.parameter']
       }
     }
   ]

@@ -16,7 +16,7 @@ function getConfig(color) {
         "punctuation.accessor"
       ],
       "settings": {
-        "foreground": color['mediumWhite']
+        "foreground": color['syntax.variable']
       }
     },
     {
@@ -28,7 +28,7 @@ function getConfig(color) {
         "punctuation.definition.string.template.end"
       ],
       "settings": {
-        "foreground": color['string_color']
+        "foreground": color['syntax.string']
       }
     },
     {
@@ -40,7 +40,7 @@ function getConfig(color) {
         "variable.other.jsdoc"
       ],
       "settings": {
-        "foreground": color['cyan']
+        "foreground": color['syntax.json']
       }
     },
     {
@@ -49,7 +49,7 @@ function getConfig(color) {
         "punctuation.definition.entity"
       ],
       "settings": {
-        "foreground": color['purple']
+        "foreground": color['syntax.constant']
       }
     },
     {
@@ -60,7 +60,7 @@ function getConfig(color) {
         "punctuation.definition.template-expression.end"
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.punctuation']
       }
     },
     {
@@ -70,7 +70,7 @@ function getConfig(color) {
         "punctuation.definition.bracket.curly.end.jsdoc"
       ],
       "settings": {
-        "foreground": color['orange']
+        "foreground": color['syntax.punctuationBracket']
       }
     },
     {
@@ -86,7 +86,7 @@ function getConfig(color) {
         "variable.other.less"
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.punctuation']
       }
     },
     {
@@ -95,7 +95,7 @@ function getConfig(color) {
         "punctuation.accessor.optional"
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.punctuation']
       }
     },
     {
@@ -105,7 +105,7 @@ function getConfig(color) {
         "punctuation.definition.directive.c"
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.punctuation']
       }
     },
     {
@@ -116,7 +116,7 @@ function getConfig(color) {
         "punctuation.definition.metadata.markdown"
       ],
       "settings": {
-        "foreground": color['pink']
+        "foreground": color['syntax.punctuation']
       }
     }
   ]
