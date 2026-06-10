@@ -46,7 +46,7 @@ const tokens = {
   'ui.bg.tab':             'tabGray',
   'ui.bg.tabInactive':     'tabInactive',
   'ui.bg.input':           'darkGray',
-  'ui.bg.titleBar':        'lightBlack',
+  'ui.bg.titleBar':        'chromeBg',
   'ui.bg.statusBar':       'black',
   'ui.bg.widget':          'black',
   'ui.bg.selection':       'gray',

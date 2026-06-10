@@ -59,6 +59,7 @@ const palette = {
   // ── Border colors ─────────────────────────────────────────
 
   border:       { dark: '#3c4043', 'dark-soft': '#3c4043', light: '#e8e8e8', 'light-soft': '#EBE4D5' },
+  chromeBg:     { dark: '#1F2020', 'dark-soft': '#1F2020', light: '#f3f3f3', 'light-soft': '#F8F1E3' },
 
   // ── UI Primary / Control colors ────────────────────────────
 
