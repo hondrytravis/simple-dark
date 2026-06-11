@@ -1,5 +1,14 @@
 # Release notes for Simple Dark Theme
 
+## [released 1.5.1]
+
+- **Text Refinements**:
+  - Dark mode text adjusted to `#bdbdbd` for comfortable WCAG AAA contrast (8.6:1) on `#202124`.
+  - Neutral gray optimized for long-form code reading without eye strain.
+- **Widget & Input Borders**:
+  - Added borders to editor find/replace widget (`editorWidget.border`, `editor.findWidgetBorder`).
+  - Added borders to input fields (`input.border`) and Copilot agent chat input (`agentsChatInput.border`).
+
 ## [released 1.5.0]
 
 - **Dark Modern Tab Styling**:
