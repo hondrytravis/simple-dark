@@ -20,8 +20,8 @@ const palette = {
   // ── Text / Foreground colors ───────────────────────────────
 
   white:       { dark: '#f0f0f0', 'dark-soft': '#f0f0f0', light: '#202124', 'light-soft': '#202124' },
-  mediumWhite: { dark: '#dddddd', 'dark-soft': '#dcdcdc', light: '#3c4043', 'light-soft': '#3c4043' },
-  grayWhite:   { dark: '#D2D3D9', 'dark-soft': '#D2D3D9', light: '#5f6368', 'light-soft': '#5f6368' },
+  mediumWhite: { dark: '#bdbdbd', 'dark-soft': '#bdbdbd', light: '#3c4043', 'light-soft': '#3c4043' },
+  grayWhite:   { dark: '#bdbdbd', 'dark-soft': '#bdbdbd', light: '#5f6368', 'light-soft': '#5f6368' },
 
   // ── Comment color ──────────────────────────────────────────
 
