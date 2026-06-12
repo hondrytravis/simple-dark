@@ -37,8 +37,8 @@ const palette = {
   // ── Syntax: Types & Identifiers ────────────────────────────
 
   cyan:        { dark: '#8BE9FD', 'dark-soft': '#9CCBD1', light: '#007b83', 'light-soft': '#006F94' },
-  lightCyan:   { dark: '#E1FFFF', 'dark-soft': '#F0F0E0', light: '#006064', 'light-soft': '#1B1F23' },
-  deepSkyBlue: { dark: '#00bfff', 'dark-soft': '#4da5c9', light: '#0277bd', 'light-soft': '#005393' },
+  lightCyan:   { dark: '#E1FFFF', 'dark-soft': '#c8d4d3', light: '#006064', 'light-soft': '#1B1F23' },
+  deepSkyBlue: { dark: '#00bfff', 'dark-soft': '#5ab2c6', light: '#0277bd', 'light-soft': '#005393' },
   mediumBlue:  { dark: '#00A1F1', 'dark-soft': '#00A1F1', light: '#0277bd', 'light-soft': '#005393' },
   blue:        { dark: '#1e90ff', 'dark-soft': '#1e90ff', light: '#1a73e8', 'light-soft': '#155dbd' },
   lightBlue:   { dark: '#75ABE0', 'dark-soft': '#75ABE0', light: '#1967d2', 'light-soft': '#1967d2' },
@@ -48,8 +48,8 @@ const palette = {
   purple:      { dark: '#BD93F9', 'dark-soft': '#BD93F9', light: '#9334e6', 'light-soft': '#8020D0' },
   pink:        { dark: '#FF69B4', 'dark-soft': '#F572B7', light: '#d01884', 'light-soft': '#d01884' },
   tomato:      { dark: '#FF6347', 'dark-soft': '#FF6347', light: '#d93025', 'light-soft': '#B71C1C' },
-  red:         { dark: '#f4433c', 'dark-soft': '#f4433c', light: '#d93025', 'light-soft': '#B71C1C' },
-  lightYellow: { dark: '#eefa7a', 'dark-soft': '#eefa7a', light: '#9a6700', 'light-soft': '#6A1B9A' },
+  red:         { dark: '#f45a55', 'dark-soft': '#f45a55', light: '#d93025', 'light-soft': '#B71C1C' },
+  lightYellow: { dark: '#eefa7a', 'dark-soft': '#c0c264', light: '#9a6700', 'light-soft': '#6A1B9A' },
 
   // ── Tab background ────────────────────────────────────────
 
@@ -69,7 +69,7 @@ const palette = {
 
   // ── Semantic ───────────────────────────────────────────────
 
-  string_color: { dark: '#C3E88D', 'dark-soft': '#C3E88D', light: '#a31515', 'light-soft': '#a31515' },
+  string_color: { dark: '#C3E88D', 'dark-soft': '#a5c47c', light: '#a31515', 'light-soft': '#a31515' },
 };
 
 /**
