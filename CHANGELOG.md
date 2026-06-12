@@ -1,5 +1,11 @@
 # Release notes for Simple Dark Theme
 
+## [released 1.6.2]
+
+- **Docs**: Refreshed README screenshots — per-theme comparison tables for TypeScript, C#, Python, HTML.
+- **Docs**: Editor appearance screenshots now show all three themes side by side.
+- **Cleanup**: Removed obsolete PHP and LESS screenshots, added Python demo.
+
 ## [released 1.6.1]
 
 - **Fix**: Removed duplicate editor group header border causing double line.
