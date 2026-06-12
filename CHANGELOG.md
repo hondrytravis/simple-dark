@@ -1,5 +1,9 @@
 # Release notes for Simple Dark Theme
 
+## [released 1.6.3]
+
+- **Fix**: Re-packed with updated appearance screenshots.
+
 ## [released 1.6.2]
 
 - **Docs**: Refreshed README screenshots — per-theme comparison tables for TypeScript, C#, Python, HTML.
