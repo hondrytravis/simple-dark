@@ -4,8 +4,6 @@ function getConfig(color) {
     "editorGroupHeader.tabsBackground": color['ui.bg.tab'],
     // Visible bottom border under the tab strip
     "editorGroupHeader.tabsBorder": color['ui.border'],
-    // Remove breadcrumb bottom border
-    "editorGroupHeader.border": color['ui.bg.editor'],
 
     // Active tab: top accent + same bg as editor
     "tab.activeBorderTop": color['ui.border.active'],
