@@ -29,22 +29,34 @@ Designed with a specific color philosophy to reduce cognitive load and improve c
 ## Screenshots
 
 ### Editor Appearance
-![appearance](images/appearance.png)
 
-### TypeScript / JavaScript
-![ts](images/ts.png)
+![appearance-dark](images/appearance-dark.png)
+![appearance-light](images/appearance-light.png)
+![appearance-light-soft](images/appearance-light-soft.png)
+
+### TypeScript
+
+| Simple Dark | Simple Light | Simple Light Soft |
+|-------------|-------------|-------------------|
+| ![ts-dark](images/typescript-dark.png) | ![ts-light](images/typescript-light.png) | ![ts-light-soft](images/typescript-light-soft.png) |
 
 ### C#
-![dotnet](images/dotnet.png)
 
-### PHP
-![php](images/php.png)
+| Simple Dark | Simple Light | Simple Light Soft |
+|-------------|-------------|-------------------|
+| ![dotnet-dark](images/dotnet-dark.png) | ![dotnet-light](images/dotnet-light.png) | ![dotnet-light-soft](images/dotnet-light-soft.png) |
+
+### Python
+
+| Simple Dark | Simple Light | Simple Light Soft |
+|-------------|-------------|-------------------|
+| ![python-dark](images/python-dark.png) | ![python-light](images/python-light.png) | ![python-light-soft](images/python-light-soft.png) |
 
 ### HTML
-![html](images/html.png)
 
-### LESS / CSS
-![less](images/less.png)
+| Simple Dark | Simple Light | Simple Light Soft |
+|-------------|-------------|-------------------|
+| ![html-dark](images/html-dark.png) | ![html-light](images/html-light.png) | ![html-light-soft](images/html-light-soft.png) |
 
 ## Installation
 
