@@ -1,5 +1,10 @@
 # Release notes for Simple Dark Theme
 
+## [released 1.6.0]
+
+- **WCAG AA Compliance**: All four themes now meet WCAG AA for code syntax colors. Dark body text at #bdbdbd (8.6:1). Dark-Soft colors tuned for eye comfort. Light-Soft orange adjusted to #BC5000 (4.5:1).
+- **Design**: Dark = high saturation. Dark-Soft/Light-Soft = low saturation. All share unified palette.
+
 ## [released 1.5.1]
 
 - **Text Refinements**:
