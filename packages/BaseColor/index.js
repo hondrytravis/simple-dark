@@ -32,7 +32,7 @@ const palette = {
 
   green:       { dark: '#00E673', 'dark-soft': '#56b97f', light: '#048043', 'light-soft': '#00753B' },
   lightGreen:  { dark: '#C3E88D', 'dark-soft': '#C3E88D', light: '#2e7d32', 'light-soft': '#2e7d32' },
-  orange:      { dark: '#FFB86C', 'dark-soft': '#D5B884', light: '#BF5400', 'light-soft': '#BF5400' },
+  orange:      { dark: '#FFB86C', 'dark-soft': '#D5B884', light: '#BF5400', 'light-soft': '#BC5000' },
 
   // ── Syntax: Types & Identifiers ────────────────────────────
 
