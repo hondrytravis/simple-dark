@@ -1,5 +1,10 @@
 # Release notes for Simple Dark Theme
 
+## [released 1.6.1]
+
+- **Fix**: Removed duplicate editor group header border causing double line.
+- **Docs**: Updated README screenshots with per-theme comparison (Dark/Light/Soft), added Python examples.
+
 ## [released 1.6.0]
 
 - **WCAG AA Compliance**: All four themes now meet WCAG AA for code syntax colors. Dark body text at #bdbdbd (8.6:1). Dark-Soft colors tuned for eye comfort. Light-Soft orange adjusted to #BC5000 (4.5:1).
