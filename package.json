@@ -40,7 +40,9 @@
     "wcag": "node wcag-check.js",
     "deploy": "sh scripts/deploy.sh",
     "theme:build": "vsce package",
-    "theme:publish": "vsce publish"
+    "theme:publish": "vsce publish",
+    "build:iterm2": "node scripts/build-iterm2.js",
+    "build:zsh": "node scripts/build-zsh.js"
   },
   "contributes": {
     "themes": [

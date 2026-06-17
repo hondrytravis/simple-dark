@@ -1,8 +1,8 @@
 .vscode/**
 .vscode-test/**
 .gitignore
-.vsix
-vsc-extension-quickstart.md
+*.vsix
+.DS_Store
 
 # Development-only assets
 demo/**
@@ -11,6 +11,7 @@ openspec/**
 packages/**
 scripts/**
 node_modules/**
-zsh-themes/**
+themes-zsh/**
+themes-iterm2/**
 build.js
 wcag-check.js
