@@ -1,57 +1,83 @@
 const Color = require("color");
 const getColors = require("./packages/BaseColor/index.js");
 
-function checkTheme(name, colors, background) {
-    console.log(`\n=== Checking Theme: ${name} (Background: ${background}) ===`);
-    console.log("WCAG AA requires 4.5:1 for normal text");
-    console.log("----------------------------------------------------------------");
-    console.log(`${"Color Name".padEnd(20)} ${"Hex".padEnd(10)} ${"Ratio".padEnd(8)} ${"AA".padEnd(6)} ${"AAA".padEnd(6)}`);
-    console.log("----------------------------------------------------------------");
+// BaseColor 中的 black token 对应 editor.background
+const BG_TOKEN = "black";
 
-    let passCount = 0;
-    let totalCount = 0;
+// 需要满足 WCAG AA（4.5:1）的核心前景色/语法色
+const FOREGROUND_TOKENS = [
+  "white",        // 主前景
+  "mediumWhite",  // 次前景
+  "grayWhite",    // 辅助文字
+  "green",        // 函数
+  "lightGreen",   // 字符串属性 / HTML id
+  "orange",       // 参数
+  "cyan",         // 类型 / 命名空间
+  "lightCyan",    // 常量
+  "deepSkyBlue",  // 原生类型
+  "mediumBlue",   // 控件蓝
+  "blue",         // 链接
+  "lightBlue",    // Markdown code / link
+  "purple",       // 常量
+  "pink",         // 关键字
+  "tomato",       // 删除 / 错误
+  "red",          // 无效
+  "lightYellow",  // Markdown image
+  "string_color", // 字符串
+];
 
-    Object.entries(colors).forEach(([key, hex]) => {
-        // Skip background colors themselves and non-color values
-        if (['black', 'lightBlack', 'gray', 'darkGray', 'darkGray_low', 'ui_bg', 'ui_border'].includes(key)) return;
-        if (typeof hex !== 'string' || !hex.startsWith('#')) return;
+// 注释色允许低于 AA，单独显示不纳入统计
+const COMMENT_TOKENS = ["lightGray"];
 
-        try {
-            const contrast = Color(hex).contrast(Color(background));
-            const passAA = contrast >= 4.5;
-            const passAAA = contrast >= 7;
-
-            if (passAA) passCount++;
-            totalCount++;
-
-            const status = passAA ? "PASS" : "FAIL";
-            // Highlight FAILs
-            const statusStr = passAA ? "PASS" : "FAIL <<";
-
-            console.log(`${key.padEnd(20)} ${hex.padEnd(10)} ${contrast.toFixed(2).padEnd(8)} ${statusStr.padEnd(6)} ${passAAA ? 'PASS' : 'FAIL'}`);
-        } catch (e) {
-            // Ignore invalid colors
-        }
-    });
-
-    console.log("----------------------------------------------------------------");
-    console.log(`Summary: ${passCount}/${totalCount} colors passed WCAG AA`);
+function getContrast(hex, bgHex) {
+  return Color(hex).contrast(Color(bgHex));
 }
 
-// 1. Check Dark Theme
-const darkColors = getColors('dark');
-checkTheme('Simple Dark', darkColors, darkColors.black);
+function checkTheme(name, mode) {
+  const colors = getColors(mode);
+  const background = colors[BG_TOKEN];
 
-// 2. Check Soft Dark Theme
-const softColors = getColors('dark-soft');
-checkTheme('Simple Dark Soft', softColors, softColors.black);
+  console.log(`\n=== ${name} (editor.background: ${background}) ===`);
+  console.log(`Token                Hex        Ratio    AA       AAA`);
+  console.log("-".repeat(62));
 
-// 3. Check Light Theme
-const lightColors = getColors('light');
-checkTheme('Simple Light', lightColors, lightColors.black);
+  let pass = 0;
+  let total = 0;
 
-// 4. Check Light Soft Theme
-const lightSoftColors = getColors('light-soft');
-checkTheme('Simple Light Soft', lightSoftColors, lightSoftColors.lightBlack);
+  for (const token of FOREGROUND_TOKENS) {
+    const hex = colors[token];
+    if (!hex || typeof hex !== "string" || !hex.startsWith("#")) continue;
 
+    const ratio = getContrast(hex, background);
+    const passAA = ratio >= 4.5;
+    const passAAA = ratio >= 7;
 
+    total++;
+    if (passAA) pass++;
+
+    const aaStr = passAA ? "PASS" : "FAIL <<";
+    const aaaStr = passAAA ? "PASS" : "FAIL";
+
+    console.log(
+      `${token.padEnd(20)} ${hex.padEnd(10)} ${ratio.toFixed(2).padEnd(8)} ${aaStr.padEnd(8)} ${aaaStr}`
+    );
+  }
+
+  console.log("-".repeat(62));
+  console.log(`Core foreground: ${pass}/${total} passed WCAG AA`);
+
+  for (const token of COMMENT_TOKENS) {
+    const hex = colors[token];
+    if (!hex || typeof hex !== "string" || !hex.startsWith("#")) continue;
+
+    const ratio = getContrast(hex, background);
+    console.log(
+      `${token.padEnd(20)} ${hex.padEnd(10)} ${ratio.toFixed(2).padEnd(8)} (comment, AA not required)`
+    );
+  }
+}
+
+checkTheme("Simple Dark", "dark");
+checkTheme("Simple Dark Soft", "dark-soft");
+checkTheme("Simple Light", "light");
+checkTheme("Simple Light Soft", "light-soft");

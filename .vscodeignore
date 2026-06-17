@@ -3,3 +3,14 @@
 .gitignore
 .vsix
 vsc-extension-quickstart.md
+
+# Development-only assets
+demo/**
+.claude/**
+openspec/**
+packages/**
+scripts/**
+node_modules/**
+zsh-themes/**
+build.js
+wcag-check.js
