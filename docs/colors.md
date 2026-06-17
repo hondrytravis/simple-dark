@@ -1,6 +1,10 @@
-# MacOs pages 颜色
+# 色彩参考
 
-颜色参考，暂时没有说那个，可以忽略
+macOS Pages 内置颜色板（仅供参考，本项目未直接使用）。
+
+当前主题实际使用的颜色定义请参见：
+- `packages/BaseColor/index.js` — 4 主题共享调色板
+- `packages/BaseColor/tokens.js` — 语义 token → 颜色名映射
 
 ```ts
 const colors = [

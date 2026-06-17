@@ -1,36 +1,39 @@
-# How to do this one
+# Quick Start
 
-You can key down `ctrl/command + shift + p` then input `developer` and selected `inspect editor Tokens and Scopes`, then focus line code, you will see this line code scope
+## Inspecting Code Scopes
 
-## more rules
+Press `Ctrl/Cmd + Shift + P`, type **Developer: Inspect Editor Tokens and Scopes**, then click on any code to see its TextMate scope and semantic token information.
 
-You can look this website
+## References
 
-sublimetext code rules: [Language helper rule](https://www.sublimetext.com/docs/3/scope_naming.html#comment)
+- [Sublime Text — Scope Naming](https://www.sublimetext.com/docs/scope_naming.html)
+- [TextMate — Language Grammars](https://macromates.com/manual/en/language_grammars)
+- [VS Code Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
 
-TextMate code rules: [Language helper rule](https://macromates.com/manual/en/language_grammars#rule_keys)
+## Local Development
 
-[theme keyword](https://code.visualstudio.com/api/references/theme-color)
-
-## development this one
-
-Please run build after each modification, and then look you changed
+After modifying any `.js` file under `packages/`, rebuild the theme JSON files:
 
 ```bash
-  npm run build
+npm run build
 ```
 
-## if u not vsce
+> Tip: Use `npm start` to enable watch mode and auto-rebuild on changes.
+
+## Install Packaging Tool
+
+This theme extension uses `@vscode/vsce` for packaging and publishing.
 
 ```bash
-  npm i -g vsce
+npm install -g @vscode/vsce
 ```
 
-## how to publish
+## Packaging & Publishing
 
 ```bash
-  # first one
-  vsce package
-  # and then
-  vsce publish
+# Package into a .vsix file
+vsce package
+
+# Publish to the VS Code Marketplace
+vsce publish
 ```
