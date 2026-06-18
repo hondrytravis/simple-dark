@@ -37,7 +37,7 @@
 #   on git:BRANCH  Active git branch name (muted green)
 #   (STATUS)       Git working-tree and remote status (see below)
 #   [HH:MM:SS]     Current timestamp, 24-hour format (gray)
-#   $               Prompt character, ready for input (gray-white)
+#   $               Prompt character, ready for input (green)
 #   C:EXIT          Last exit code, right-aligned (red, only on error)
 #   venv:name       Active Python virtualenv (purple, when in use)
 #
@@ -78,7 +78,8 @@
 #   ${C_TOMATO}     番茄 tomato      D deleted
 #   ${C_RED}     红 red          ! conflict,  C:exit code
 #   ${C_GRAY}     灰 lightGray    @  in  on  git:  ( )  ·  [TIME]
-#   ${C_MUTED}     灰白 mediumWhite  $ prompt,  command input text
+#   ${C_MUTED}     灰白 mediumWhite  command input text
+#   ${C_GREEN}     绿 green        $ prompt character
 #
 # ── Palette reference ─────────────────────────────────────────
 #   #202124 黑 bg   ${C_BRIGHT} 主前景   ${C_MUTED} 次前景
@@ -119,6 +120,9 @@ sd_git_prompt() {
                 || __git_prompt_git rev-parse --short HEAD 2>/dev/null)
   [[ -z "$branch" ]] && return
 
+  # Escape '%' so branch names like 'feature%F{red}' don't corrupt the prompt
+  branch=${branch//\%/%%}
+
   # ── Collect status flags ────────────────────────────────
   local flags=()
   local status_text
@@ -139,8 +143,8 @@ sd_git_prompt() {
     flags+=("%F{${C_GREEN}}A%f")
   fi
 
-  # Deleted → D (red)
-  if echo "$status_text" | grep -qE '^ D|^D '; then
+  # Deleted → D (red): index deleted, work-tree deleted, or mixed states
+  if echo "$status_text" | grep -qE '^ D|^D |^.D'; then
     flags+=("%F{${C_TOMATO}}D%f")
   fi
 
@@ -198,15 +202,18 @@ sd_venv_prompt() {
 # ── Exit code: shown on right side, red, only on error ────────
 
 # ── PROMPT ───────────────────────────────────────────────────
+# Use \$(...) so the functions are re-evaluated before every prompt
+# (oh-my-zsh enables promptsubst). Without the backslash, the git status
+# is captured once when the theme is sourced and never refreshes.
 PROMPT="
 %F{${C_PINK}}%B#%b%f \
 $(sd_user_host)\
 %F{${C_ORANGE}}%B%~%b%f \
-$(sd_git_prompt)\
-$(sd_venv_prompt)\
+\$(sd_git_prompt)\
+\$(sd_venv_prompt)\
  \
 %F{${C_GRAY}}[%*]%f
-%F{${C_MUTED}}%B$%b%f "
+%F{${C_GREEN}}%B$%b%f "
 
 # ── RPROMPT: exit code on the right ──────────────────────────
 RPROMPT='%(?,,%F{${C_RED}}C:%?%f)'
