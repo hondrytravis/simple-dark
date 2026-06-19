@@ -205,7 +205,7 @@ sd_git_prompt() {
   fi
 
   # ── Build output ────────────────────────────────────────
-  local out="\${S_VCS_ON}\${S_VCS_TYPE}%F{\${C_BRANCH}}\${branch}%f"
+  local out=" %F{\${C_GRAY}}on%f %F{\${C_GRAY}}git:%f%F{\${C_BRANCH}}\${branch}%f"
   if (( \${#flags} > 0 )); then
     local flag_str="\${flags[1]}"
     for ((i=2; i<=\${#flags}; i++)); do
@@ -242,7 +242,7 @@ sd_venv_prompt() {
 PROMPT="
 %F{\${C_PINK}}%B#%b%f \\
 \$(sd_user_host)\\
-%F{\${C_ORANGE}}%B%~%b%f \\
+%F{\${C_ORANGE}}%B%~%b%f\
 \\$(sd_git_prompt)\\
 \\$(sd_venv_prompt)\\
  \\
