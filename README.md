@@ -65,6 +65,11 @@ Designed with a specific color philosophy to reduce cognitive load and improve c
 3.  Click **Install**.
 4.  Press `Cmd+K Cmd+T` (macOS) or `Ctrl+K Ctrl+T` (Windows/Linux) and select one of the **Simple** themes.
 
+## Documentation
+
+- [Quick Start (EN)](docs/quick_start.md)
+- [快速上手（中文）](docs/quick_start_zh_CN.md)
+
 ## Customization
 
 You can customize specific colors in your `settings.json`:
