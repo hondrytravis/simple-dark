@@ -42,6 +42,7 @@
     "theme:build": "vsce package",
     "theme:publish": "vsce publish",
     "build:iterm2": "node scripts/build-iterm2.js",
+    "build:iterm2-light-soft": "node scripts/build-itermcolors-light-soft.js",
     "build:zsh": "node scripts/build-zsh.js"
   },
   "contributes": {
